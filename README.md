@@ -1,0 +1,1 @@
+# mindgabayph.github.io
