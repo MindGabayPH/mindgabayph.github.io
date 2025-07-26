@@ -21,36 +21,160 @@
     <main>
         <h2>Mental Health Resources Directory</h2>
         
-        <div class="resource-card">
+        <!-- Search and Filter Section -->
+        <div class="filter-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search resources..." onkeyup="filterResources()">
+            </div>
+            
+            <div class="filters">
+                <select id="typeFilter" onchange="filterResources()">
+                    <option value="">All Types</option>
+                    <option value="Government">Government</option>
+                    <option value="NGO">NGO</option>
+                    <option value="Private">Private</option>
+                    <option value="University">University</option>
+                    <option value="Hotline">Hotline</option>
+                </select>
+                
+                <select id="priceFilter" onchange="filterResources()">
+                    <option value="">All Prices</option>
+                    <option value="Free">Free</option>
+                    <option value="Low">₱1 - ₱500</option>
+                    <option value="Medium">₱500 - ₱2,000</option>
+                    <option value="High">₱2,000+</option>
+                </select>
+                
+                <select id="locationFilter" onchange="filterResources()">
+                    <option value="">All Locations</option>
+                    <option value="Mandaluyong">Mandaluyong</option>
+                    <option value="Quezon City">Quezon City</option>
+                    <option value="Manila">Manila</option>
+                    <option value="Makati">Makati</option>
+                    <option value="Nationwide">Nationwide</option>
+                </select>
+                
+                <button onclick="clearFilters()" class="clear-btn">Clear Filters</button>
+            </div>
+        </div>
+        
+        <div id="resultsCount" class="results-count"></div>
+        
+        <!-- Resource Cards -->
+        <div class="resource-card" data-type="Government" data-price="Free" data-location="Mandaluyong">
             <h3>National Center for Mental Health</h3>
             <p><strong>Type:</strong> Government Hospital</p>
             <p><strong>Address:</strong> Nueve de Febrero St, Mandaluyong, Metro Manila</p>
             <p><strong>Phone:</strong> (02) 8531-9001</p>
-            <p><strong>Services:</strong> Crisis intervention, therapy, medication management</p>
+            <p><strong>Website:</strong> www.ncmh.gov.ph</p>
+            <p><strong>Services:</strong> Crisis intervention, therapy, medication management, emergency care</p>
             <p><strong>Cost:</strong> Free - ₱500</p>
+            <p><strong>Specializes in:</strong> Depression, Anxiety, Bipolar, Schizophrenia</p>
         </div>
         
-        <div class="resource-card">
+        <div class="resource-card" data-type="NGO" data-price="Medium" data-location="Quezon City">
             <h3>Philippine Mental Health Association</h3>
             <p><strong>Type:</strong> NGO</p>
             <p><strong>Address:</strong> 1123 PMHA Bldg, Quezon Ave, Quezon City</p>
             <p><strong>Phone:</strong> (02) 8920-6957</p>
-            <p><strong>Services:</strong> Counseling, advocacy, educational programs</p>
+            <p><strong>Website:</strong> www.pmha.org.ph</p>
+            <p><strong>Services:</strong> Counseling, advocacy, educational programs, support groups</p>
             <p><strong>Cost:</strong> ₱500 - ₱2,000</p>
+            <p><strong>Specializes in:</strong> Depression, Anxiety, ADHD, Stress Management</p>
         </div>
         
-        <div class="resource-card">
+        <div class="resource-card" data-type="University" data-price="Low" data-location="Quezon City">
             <h3>UP Psychology Department Clinic</h3>
             <p><strong>Type:</strong> University Clinic</p>
             <p><strong>Address:</strong> UP Diliman, Quezon City</p>
             <p><strong>Phone:</strong> (02) 8920-5301</p>
+            <p><strong>Website:</strong> www.upd.edu.ph</p>
             <p><strong>Services:</strong> Student counseling, therapy, psychological testing</p>
             <p><strong>Cost:</strong> ₱200 - ₱800</p>
+            <p><strong>Specializes in:</strong> Student mental health, Learning disorders, ADHD</p>
+        </div>
+        
+        <div class="resource-card" data-type="Private" data-price="High" data-location="Makati">
+            <h3>Empath Mental Health Services</h3>
+            <p><strong>Type:</strong> Private Clinic</p>
+            <p><strong>Address:</strong> Alabang Hills, Muntinlupa City</p>
+            <p><strong>Phone:</strong> 0917-123-4567</p>
+            <p><strong>Website:</strong> www.empath.ph</p>
+            <p><strong>Services:</strong> Online therapy, in-person counseling, corporate wellness</p>
+            <p><strong>Cost:</strong> ₱1,500 - ₱3,500</p>
+            <p><strong>Specializes in:</strong> Anxiety, Depression, Relationship issues, Work stress</p>
+        </div>
+        
+        <div class="resource-card" data-type="Hotline" data-price="Free" data-location="Nationwide">
+            <h3>DOH Crisis Hotline</h3>
+            <p><strong>Type:</strong> Crisis Hotline</p>
+            <p><strong>Address:</strong> Nationwide Coverage</p>
+            <p><strong>Phone:</strong> 1553 (Luzon-wide toll-free)</p>
+            <p><strong>Website:</strong> www.doh.gov.ph</p>
+            <p><strong>Services:</strong> 24/7 crisis intervention, suicide prevention, emergency support</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Specializes in:</strong> Crisis intervention, Suicide prevention, Emergency mental health</p>
+        </div>
+        
+        <div id="noResults" class="no-results" style="display: none;">
+            <p>No resources found matching your criteria. Try adjusting your filters.</p>
         </div>
     </main>
     
     <footer>
         <p>&copy; 2025 MindGabay PH - Mental Health Resources Philippines</p>
     </footer>
+
+    <script>
+        function filterResources() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const typeFilter = document.getElementById('typeFilter').value;
+            const priceFilter = document.getElementById('priceFilter').value;
+            const locationFilter = document.getElementById('locationFilter').value;
+            
+            const resourceCards = document.querySelectorAll('.resource-card');
+            let visibleCount = 0;
+            
+            resourceCards.forEach(card => {
+                const cardText = card.textContent.toLowerCase();
+                const cardType = card.getAttribute('data-type');
+                const cardPrice = card.getAttribute('data-price');
+                const cardLocation = card.getAttribute('data-location');
+                
+                const matchesSearch = cardText.includes(searchTerm);
+                const matchesType = !typeFilter || cardType === typeFilter;
+                const matchesPrice = !priceFilter || cardPrice === priceFilter;
+                const matchesLocation = !locationFilter || cardLocation === locationFilter;
+                
+                if (matchesSearch && matchesType && matchesPrice && matchesLocation) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Update results count
+            const resultsCount = document.getElementById('resultsCount');
+            resultsCount.textContent = `Showing ${visibleCount} result${visibleCount !== 1 ? 's' : ''}`;
+            
+            // Show/hide no results message
+            const noResults = document.getElementById('noResults');
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+        
+        function clearFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('typeFilter').value = '';
+            document.getElementById('priceFilter').value = '';
+            document.getElementById('locationFilter').value = '';
+            filterResources();
+        }
+        
+        // Initialize results count on page load
+        window.onload = function() {
+            filterResources();
+        };
+    </script>
 </body>
 </html>
