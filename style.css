@@ -210,3 +210,24 @@ footer {
         margin: 0.2rem 0;
     }
 }
+/* Facebook Group Link Styling */
+.resource-card a {
+    color: #1877f2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.resource-card a:hover {
+    text-decoration: underline;
+    color: #166fe5;
+}
+
+/* Optional: Add Facebook icon styling */
+.resource-card[data-type="Facebook Group"] {
+    border-left-color: #1877f2;
+}
+
+.resource-card[data-type="Facebook Group"] h3::before {
+    content: "👥 ";
+    margin-right: 0.5rem;
+}
