@@ -21,6 +21,13 @@
     <main>
         <h2>Mental Health Resources Directory</h2>
         
+        <!-- Emergency Alert -->
+        <div style="background: #dc3545; color: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+            <h3>🚨 EMERGENCY CRISIS NUMBERS</h3>
+            <p><strong>NCMH Crisis Hotline:</strong> 1553 (landline) | 0917-899-8727 | 0966-351-4518 | 0908-639-2672</p>
+            <p><strong>General Emergency:</strong> 911</p>
+        </div>
+        
         <!-- Search and Filter Section -->
         <div class="filter-section">
             <div class="search-box">
@@ -52,6 +59,8 @@
                     <option value="Quezon City">Quezon City</option>
                     <option value="Manila">Manila</option>
                     <option value="Makati">Makati</option>
+                    <option value="Muntinlupa">Muntinlupa</option>
+                    <option value="Metro Manila">Metro Manila</option>
                     <option value="Nationwide">Nationwide</option>
                 </select>
                 
@@ -61,7 +70,113 @@
         
         <div id="resultsCount" class="results-count"></div>
         
-        <!-- Resource Cards -->
+        <!-- GOVERNMENT MENTAL HEALTH RESOURCES -->
+        
+        <!-- NCMH Crisis Hotlines -->
+        <div class="resource-card" data-type="Government" data-price="Free" data-location="Nationwide">
+            <h3>🏥 National Center for Mental Health (NCMH) Crisis Hotlines</h3>
+            <p><strong>Type:</strong> Government Crisis Support - Department of Health</p>
+            <p><strong>Address:</strong> Nueve de Febrero St, Mandaluyong, Metro Manila (Headquarters)</p>
+            <p><strong>Phone:</strong> 1553 (toll-free landline) | 0917-899-8727 | 0966-351-4518 | 0908-639-2672</p>
+            <p><strong>Alternative:</strong> (02) 7-989-8727</p>
+            <p><strong>Website:</strong> <a href="https://doh.gov.ph" target="_blank">doh.gov.ph</a></p>
+            <p><strong>Services:</strong> 24/7 crisis intervention, suicide prevention, psychological first aid, psychiatric emergencies, depression support, grief counseling, domestic violence assistance, LGBTQ+ support</p>
+            <p><strong>Consultation Type:</strong> Phone support, Crisis intervention</p>
+            <p><strong>Availability:</strong> 24/7 - Available anytime</p>
+            <p><strong>Cost:</strong> Free</p>
+
+        </div>
+
+        <!-- DSWD WiSupport -->
+        <div class="resource-card" data-type="Government" data-price="Free" data-location="Quezon City">
+            <h3>💻 DSWD WiSupport - Digital Mental Health Platform</h3>
+            <p><strong>Type:</strong> Government Digital Platform - Department of Social Welfare and Development</p>
+            <p><strong>Address:</strong> Crisis Intervention Unit Building, DSWD Compound, Constitution Hills, Batasan Complex, Quezon City, PH 1126</p>
+            <p><strong>Phone:</strong> 0917-1070062 | 0947-4822864 | 0916-2471194</p>
+            <p><strong>Text/SMS:</strong> 0918-9122813</p>
+            <p><strong>Email:</strong> WiSupport@dswd.gov.ph</p>
+            <p><strong>Website:</strong> <a href="https://wisupport.dswd.gov.ph" target="_blank">wisupport.dswd.gov.ph</a> | <a href="https://ekwentomo.dswd.gov.ph" target="_blank">ekwentomo.dswd.gov.ph</a></p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/DSWDWiSUPPORT/" target="_blank">DSWDWiSUPPORT</a></p>
+            <p><strong>Services:</strong> Psychological First Aid (PFA), psychosocial support, crisis counseling, psychiatric referrals, AICS client support, emergency assistance</p>
+            <p><strong>Consultation Type:</strong> Online support, Phone/Text, Email, Mobile app, Face-to-face (at offices)</p>
+            <p><strong>Availability:</strong> Monday to Friday, 8:00 AM to 5:00 PM</p>
+            <p><strong>Cost:</strong> Free</p>
+
+        </div>
+
+        <!-- DOH Medicine Access Program -->
+        <div class="resource-card" data-type="Government" data-price="Free" data-location="Nationwide">
+            <h3>💊 DOH Medicine Access Program for Mental Health (MAP-MH)</h3>
+            <p><strong>Type:</strong> Government Medicine Program - Department of Health</p>
+            <p><strong>Address:</strong> 362 access sites nationwide</p>
+            <p><strong>Phone:</strong> Contact local DOH hospitals and Centers for Health Development</p>
+            <p><strong>Website:</strong> <a href="https://doh.gov.ph" target="_blank">doh.gov.ph</a></p>
+            <p><strong>Services:</strong> Free essential mental health medicines, 30 different medications available, serves mental, neurologic, and substance use disorders</p>
+            <p><strong>Consultation Type:</strong> Face-to-face at access sites</p>
+            <p><strong>Availability:</strong> Regular clinic hours at participating facilities</p>
+            <p><strong>Cost:</strong> Free</p>
+
+            <p><strong>Coverage:</strong> 124,246+ service users served as of 2022</p>
+        </div>
+
+        <!-- PhilHealth Mental Health Benefits -->
+        <div class="resource-card" data-type="Government" data-price="Free" data-location="Nationwide">
+            <h3>🏥 PhilHealth Mental Health Benefit Package</h3>
+            <p><strong>Type:</strong> Government Health Insurance - Philippine Health Insurance Corporation</p>
+            <p><strong>Address:</strong> PhilHealth offices nationwide</p>
+            <p><strong>Phone:</strong> Contact local PhilHealth offices</p>
+            <p><strong>Website:</strong> <a href="https://www.philhealth.gov.ph" target="_blank">philhealth.gov.ph</a></p>
+            <p><strong>Services:</strong> Mental health benefits for outpatient services, 12 consultations coverage, diagnostic follow-up, psychoeducation, psychosocial support</p>
+            <p><strong>Consultation Type:</strong> Face-to-face at accredited facilities</p>
+            <p><strong>Availability:</strong> Regular clinic hours at participating facilities</p>
+            <p><strong>Cost:</strong> Free (with PhilHealth coverage)</p>
+
+        </div>
+
+        <!-- DOH Substance Abuse Helpline -->
+        <div class="resource-card" data-type="Government" data-price="Free" data-location="Nationwide">
+            <h3>☎️ DOH Substance Abuse Helpline</h3>
+            <p><strong>Type:</strong> Government Hotline - Department of Health</p>
+            <p><strong>Address:</strong> Nationwide Coverage</p>
+            <p><strong>Phone:</strong> 1550</p>
+            <p><strong>Website:</strong> <a href="https://doh.gov.ph" target="_blank">doh.gov.ph</a></p>
+            <p><strong>Services:</strong> Substance abuse support, addiction counseling, referral services</p>
+            <p><strong>Consultation Type:</strong> Phone support</p>
+            <p><strong>Availability:</strong> Check with DOH for specific hours</p>
+            <p><strong>Cost:</strong> Free</p>
+
+        </div>
+
+        <!-- NCMH Women and Child Protection Unit -->
+        <div class="resource-card" data-type="Government" data-price="Free" data-location="Mandaluyong">
+            <h3>👩‍👧‍👦 NCMH Women and Child Protection Unit</h3>
+            <p><strong>Type:</strong> Government Specialized Unit - National Center for Mental Health</p>
+            <p><strong>Address:</strong> National Center for Mental Health, Nueve de Febrero St, Mandaluyong, Metro Manila</p>
+            <p><strong>Phone:</strong> 8-531-9001 Loc 309</p>
+            <p><strong>Website:</strong> <a href="https://doh.gov.ph" target="_blank">doh.gov.ph</a></p>
+            <p><strong>Services:</strong> Specialized mental health support for women and children, trauma counseling, abuse support</p>
+            <p><strong>Consultation Type:</strong> Face-to-face, specialized care</p>
+            <p><strong>Availability:</strong> Regular clinic hours</p>
+            <p><strong>Cost:</strong> Free</p>
+
+        </div>
+
+        <!-- Bantay Bata Helpline -->
+        <div class="resource-card" data-type="Government" data-price="Free" data-location="Nationwide">
+            <h3>👶 Bantay Bata Helpline 163</h3>
+            <p><strong>Type:</strong> Government Child Protection Hotline</p>
+            <p><strong>Address:</strong> Nationwide Coverage</p>
+            <p><strong>Phone:</strong> 163</p>
+            <p><strong>Website:</strong> Contact DSWD for more information</p>
+            <p><strong>Services:</strong> Child protection, crisis support for minors, emergency assistance for children</p>
+            <p><strong>Consultation Type:</strong> Phone support</p>
+            <p><strong>Availability:</strong> 7 days a week, 7 AM to 7 PM</p>
+            <p><strong>Cost:</strong> Free</p>
+
+        </div>
+
+        <!-- EXISTING RESOURCES -->
+        
         <div class="resource-card" data-type="Government" data-price="Free" data-location="Mandaluyong">
             <h3>National Center for Mental Health</h3>
             <p><strong>Type:</strong> Government Hospital</p>
@@ -70,7 +185,7 @@
             <p><strong>Website:</strong> www.ncmh.gov.ph</p>
             <p><strong>Services:</strong> Crisis intervention, therapy, medication management, emergency care</p>
             <p><strong>Cost:</strong> Free - ₱500</p>
-            <p><strong>Specializes in:</strong> Depression, Anxiety, Bipolar, Schizophrenia</p>
+
         </div>
         
         <div class="resource-card" data-type="NGO" data-price="Medium" data-location="Quezon City">
@@ -81,7 +196,7 @@
             <p><strong>Website:</strong> www.pmha.org.ph</p>
             <p><strong>Services:</strong> Counseling, advocacy, educational programs, support groups</p>
             <p><strong>Cost:</strong> ₱500 - ₱2,000</p>
-            <p><strong>Specializes in:</strong> Depression, Anxiety, ADHD, Stress Management</p>
+
         </div>
         
         <div class="resource-card" data-type="University" data-price="Low" data-location="Quezon City">
@@ -92,10 +207,10 @@
             <p><strong>Website:</strong> www.upd.edu.ph</p>
             <p><strong>Services:</strong> Student counseling, therapy, psychological testing</p>
             <p><strong>Cost:</strong> ₱200 - ₱800</p>
-            <p><strong>Specializes in:</strong> Student mental health, Learning disorders, ADHD</p>
+
         </div>
         
-        <div class="resource-card" data-type="Private" data-price="High" data-location="Makati">
+        <div class="resource-card" data-type="Private" data-price="High" data-location="Muntinlupa">
             <h3>Empath Mental Health Services</h3>
             <p><strong>Type:</strong> Private Clinic</p>
             <p><strong>Address:</strong> Alabang Hills, Muntinlupa City</p>
@@ -103,7 +218,7 @@
             <p><strong>Website:</strong> www.empath.ph</p>
             <p><strong>Services:</strong> Online therapy, in-person counseling, corporate wellness</p>
             <p><strong>Cost:</strong> ₱1,500 - ₱3,500</p>
-            <p><strong>Specializes in:</strong> Anxiety, Depression, Relationship issues, Work stress</p>
+
         </div>
         
         <div class="resource-card" data-type="Hotline" data-price="Free" data-location="Nationwide">
@@ -114,68 +229,70 @@
             <p><strong>Website:</strong> www.doh.gov.ph</p>
             <p><strong>Services:</strong> 24/7 crisis intervention, suicide prevention, emergency support</p>
             <p><strong>Cost:</strong> Free</p>
-            <p><strong>Specializes in:</strong> Crisis intervention, Suicide prevention, Emergency mental health</p>
+
         </div>
+        
         <!-- Facebook Group Examples -->
-<div class="resource-card" data-type="Facebook Group" data-price="Free" data-location="Nationwide">
-    <h3>Mental Health Support Philippines 🇵🇭</h3>
-    <p><strong>Type:</strong> Facebook Support Group</p>
-    <p><strong>Platform:</strong> Facebook</p>
-    <p><strong>Members:</strong> 15,000+ members</p>
-    <p><strong>Link:</strong> <a href="#" target="_blank">facebook.com/groups/mentalhealthsupportph</a></p>
-    <p><strong>Services:</strong> Peer support, resource sharing, mental health discussions</p>
-    <p><strong>Cost:</strong> Free</p>
-    <p><strong>Specializes in:</strong> General mental health support, Community discussions</p>
-    <p><strong>Language:</strong> English, Filipino</p>
-</div>
+        <div class="resource-card" data-type="Facebook Group" data-price="Free" data-location="Nationwide">
+            <h3>Mental Health Support Philippines 🇵🇭</h3>
+            <p><strong>Type:</strong> Facebook Support Group</p>
+            <p><strong>Platform:</strong> Facebook</p>
+            <p><strong>Members:</strong> 15,000+ members</p>
+            <p><strong>Link:</strong> <a href="#" target="_blank">facebook.com/groups/mentalhealthsupportph</a></p>
+            <p><strong>Services:</strong> Peer support, resource sharing, mental health discussions</p>
+            <p><strong>Cost:</strong> Free</p>
 
-<div class="resource-card" data-type="Facebook Group" data-price="Free" data-location="Nationwide">
-    <h3>Anxiety and Depression Support Philippines</h3>
-    <p><strong>Type:</strong> Facebook Support Group</p>
-    <p><strong>Platform:</strong> Facebook</p>
-    <p><strong>Members:</strong> 8,500+ members</p>
-    <p><strong>Link:</strong> <a href="#" target="_blank">facebook.com/groups/anxietydepressionsupportph</a></p>
-    <p><strong>Services:</strong> Anonymous support, coping strategies, crisis support</p>
-    <p><strong>Cost:</strong> Free</p>
-    <p><strong>Specializes in:</strong> Anxiety disorders, Depression, Panic attacks</p>
-    <p><strong>Language:</strong> English, Filipino</p>
-</div>
+            <p><strong>Language:</strong> English, Filipino</p>
+        </div>
 
-<div class="resource-card" data-type="Facebook Group" data-price="Free" data-location="Nationwide">
-    <h3>Silent Battle PH - Mental Health Community</h3>
-    <p><strong>Type:</strong> Facebook Support Group</p>
-    <p><strong>Platform:</strong> Facebook</p>
-    <p><strong>Members:</strong> 12,000+ members</p>
-    <p><strong>Link:</strong> <a href="#" target="_blank">facebook.com/groups/silentbattleph</a></p>
-    <p><strong>Services:</strong> Safe space discussions, mental health advocacy, resource sharing</p>
-    <p><strong>Cost:</strong> Free</p>
-    <p><strong>Specializes in:</strong> Depression, Suicide prevention, Peer support</p>
-    <p><strong>Language:</strong> Primarily Filipino/Tagalog</p>
-</div>
+        <div class="resource-card" data-type="Facebook Group" data-price="Free" data-location="Nationwide">
+            <h3>Anxiety and Depression Support Philippines</h3>
+            <p><strong>Type:</strong> Facebook Support Group</p>
+            <p><strong>Platform:</strong> Facebook</p>
+            <p><strong>Members:</strong> 8,500+ members</p>
+            <p><strong>Link:</strong> <a href="#" target="_blank">facebook.com/groups/anxietydepressionsupportph</a></p>
+            <p><strong>Services:</strong> Anonymous support, coping strategies, crisis support</p>
+            <p><strong>Cost:</strong> Free</p>
 
-<div class="resource-card" data-type="Facebook Group" data-price="Free" data-location="Nationwide">
-    <h3>OFW Mental Health Support Group</h3>
-    <p><strong>Type:</strong> Facebook Support Group</p>
-    <p><strong>Platform:</strong> Facebook</p>
-    <p><strong>Members:</strong> 6,200+ members</p>
-    <p><strong>Link:</strong> <a href="#" target="_blank">facebook.com/groups/ofwmentalhealthsupport</a></p>
-    <p><strong>Services:</strong> Support for overseas workers, homesickness counseling, family issues</p>
-    <p><strong>Cost:</strong> Free</p>
-    <p><strong>Specializes in:</strong> OFW-specific mental health, Homesickness, Family separation anxiety</p>
-    <p><strong>Language:</strong> English, Filipino, Arabic</p>
-</div>
+            <p><strong>Language:</strong> English, Filipino</p>
+        </div>
 
-<div class="resource-card" data-type="Facebook Group" data-price="Free" data-location="Metro Manila">
-    <h3>Young Adults Mental Health Manila</h3>
-    <p><strong>Type:</strong> Facebook Support Group</p>
-    <p><strong>Platform:</strong> Facebook</p>
-    <p><strong>Members:</strong> 4,800+ members</p>
-    <p><strong>Link:</strong> <a href="#" target="_blank">facebook.com/groups/youngadultsmentalhealthmnl</a></p>
-    <p><strong>Services:</strong> Age-specific support, study stress, quarter-life crisis discussions</p>
-    <p><strong>Cost:</strong> Free</p>
-    <p><strong>Specializes in:</strong> Young adult issues, Academic stress, Career anxiety, Relationship problems</p>
-    <p><strong>Language:</strong> English, Filipino</p>
-</div>
+        <div class="resource-card" data-type="Facebook Group" data-price="Free" data-location="Nationwide">
+            <h3>Silent Battle PH - Mental Health Community</h3>
+            <p><strong>Type:</strong> Facebook Support Group</p>
+            <p><strong>Platform:</strong> Facebook</p>
+            <p><strong>Members:</strong> 12,000+ members</p>
+            <p><strong>Link:</strong> <a href="#" target="_blank">facebook.com/groups/silentbattleph</a></p>
+            <p><strong>Services:</strong> Safe space discussions, mental health advocacy, resource sharing</p>
+            <p><strong>Cost:</strong> Free</p>
+
+            <p><strong>Language:</strong> Primarily Filipino/Tagalog</p>
+        </div>
+
+        <div class="resource-card" data-type="Facebook Group" data-price="Free" data-location="Nationwide">
+            <h3>OFW Mental Health Support Group</h3>
+            <p><strong>Type:</strong> Facebook Support Group</p>
+            <p><strong>Platform:</strong> Facebook</p>
+            <p><strong>Members:</strong> 6,200+ members</p>
+            <p><strong>Link:</strong> <a href="#" target="_blank">facebook.com/groups/ofwmentalhealthsupport</a></p>
+            <p><strong>Services:</strong> Support for overseas workers, homesickness counseling, family issues</p>
+            <p><strong>Cost:</strong> Free</p>
+
+            <p><strong>Language:</strong> English, Filipino, Arabic</p>
+        </div>
+
+        <div class="resource-card" data-type="Facebook Group" data-price="Free" data-location="Metro Manila">
+            <h3>Young Adults Mental Health Manila</h3>
+            <p><strong>Type:</strong> Facebook Support Group</p>
+            <p><strong>Platform:</strong> Facebook</p>
+            <p><strong>Members:</strong> 4,800+ members</p>
+            <p><strong>Link:</strong> <a href="#" target="_blank">facebook.com/groups/youngadultsmentalhealthmnl</a></p>
+            <p><strong>Services:</strong> Age-specific support, study stress, quarter-life crisis discussions</p>
+            <p><strong>Cost:</strong> Free</p>
+
+            <p><strong>Language:</strong> English, Filipino</p>
+        </div>
+        
         <div id="noResults" class="no-results" style="display: none;">
             <p>No resources found matching your criteria. Try adjusting your filters.</p>
         </div>
